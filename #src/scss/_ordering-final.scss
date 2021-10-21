@@ -1,0 +1,72 @@
+.ordering-final {
+    height: 119px;
+    background: $secondary-grey;
+    border-top: 1px solid $main-border;
+    position:fixed;
+    bottom:0px;
+    left:0px;
+    right:0px;
+
+    &.final-hide {
+        display: none;
+    }
+}
+
+.ordering-final__wrapper {
+    align-items: center;
+    display: flex;
+    padding: 20px 40px;
+}
+
+.ordering-final__btn {
+    display: block;
+    width: 398px;
+    height: 80px;
+    margin-right: 40px;
+    line-height: 80px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 29px;
+    font-family: $default-bold;
+    color: $white;
+    background: $ordering-btn-bg;
+    border: $ordering-btn-border;
+    border-radius: 4px;
+    box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.12), 0px 3px 1px rgba(0, 0, 0, 0.04), 0px 2px 0px rgba(149, 135, 128, 0.4);
+}
+
+.ordering-final__info {
+    width: 540px;
+    font-size: 17px;
+    line-height: 21px;
+    margin-right: 150px;
+}
+
+.ordering-final__price-wrapper {
+    width: 489px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.ordering-final__price-title {
+    font-size: 22px;
+    line-height: 28px;
+}
+
+.ordering-final__price-value {
+    padding-right: 84px;
+    font-size: 35px;
+    line-height: 44px;
+    font-family: $default-bold;
+}
+
+.ordering-final__price-title-mobile {
+    display: none;
+    width: 100%;
+    justify-content: space-between;
+    margin-bottom: 12px;
+    font-family: $default-bold;
+    font-size: 14px;
+    line-height: 18px;
+}

@@ -1,0 +1,18 @@
+@font-face {
+    font-family: 'PT Root UI Light';
+    src: local('PT Root UI Light'), local('PT Root UI Light'),
+        url('../fonts/UI_Light.otf') format('opentype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'PT Root UI Bold';
+    src: local('PT Root UI Bold'), local('PT Root UI Bold'),
+        url('../fonts/UI_Bold.otf') format('opentype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+$default-light: 'PT Root UI Light';
+$default-bold: 'PT Root UI Bold';

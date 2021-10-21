@@ -1,0 +1,217 @@
+@import "reset-custom.scss";
+@import "fonts.scss";
+@import "colors.scss";
+@import "_delivery-item.scss";
+@import "_recipient-item.scss";
+@import "_payment-item.scss";
+@import "_ordering-final.scss";
+@import "_pagination-item.scss";
+@import "_order-check.scss";
+@import "media.scss";
+
+%tpl-h1 {
+    margin-bottom: 20px;
+    padding-left: 43px;
+    padding-top: 48px;
+    font-size: 35px;
+    line-height: 44px;
+    font-family: $default-bold;
+}
+
+%tpl-h2 {
+    font-size: 29px;
+    line-height: 37px;
+    font-family: $default-bold;
+}
+
+%tpl-description {
+    font-size: 22px;
+    line-height: 28px;
+    font-family: $default-bold;
+}
+
+%tpl-content {
+    font-size: 22px;
+    line-height: 28px;
+}
+
+%tpl-custom-radio {
+    input[type="radio"] {
+        display: none;
+
+        &:checked {
+            & + label {
+                border: 2px solid $blue;
+                padding: 19px;
+                cursor: default;
+            }  
+        }
+    }
+
+    label {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 0 20px;
+        width: 100%;
+        height: 100%;      
+        border: 1px solid $main-border;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+}
+
+%tpl-custom-checkbox {
+    label {
+        position: relative;
+        padding-left: 34px;
+        cursor: pointer;        
+    }
+
+    input[type="checkbox"] {
+        display: none;
+        & + label {
+            &:before {
+                content: '';
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 24px;
+                height: 24px;
+                background: url('../img/confirm.svg') no-repeat center;
+                background-color: $blue;
+                opacity: 0.25;
+                transition: 0.2s;
+                border-radius: 2px;   
+            }
+        }
+
+        &:checked {
+            & + label {
+                 &:before {
+                     opacity: 1;
+                }
+            }
+        }
+    }      
+}
+
+%tpl-custom-select {
+    .floating-select {
+        display:block;
+        width:100%;
+        padding-top: 24px;
+        padding-left: 10px;
+        margin-bottom: 14px;
+        border: 1px solid $main-border;
+        border-radius: 4px;
+        -webkit-appearance: none;
+        appearance: none;       
+
+        &:focus {
+            outline:none;
+
+            & ~ label {
+                top: 10px;
+            }
+        }
+
+        &:not([value=""]):valid ~ label {
+            top: 10px;
+        }
+    }
+
+    label {
+        position:absolute;
+        pointer-events:none;
+        left: 14px;
+        top: 28px;
+        font-size: 17px;
+        line-height: 21px;
+        transition:0.2s ease all; 
+        -moz-transition:0.2s ease all; 
+        -webkit-transition:0.2s ease all;
+    }
+}
+
+/* класс тех. блока, без семантического смысла, начанается с _ */
+._container {
+    width: 728px;
+}
+
+._change-btn {
+    display: block;
+    font-size: 22px;
+    line-height: 28px;
+    color: $blue;
+    text-decoration: none;
+}
+
+._text-link {
+    color: $blue;
+    text-decoration: none;
+}
+
+._bold {
+    font-family: $default-bold;
+}
+
+body {
+    font-family: $default-light;
+    color: $black;
+    padding-bottom: 50px;
+
+    &.remove-scroll {
+        overflow: hidden;
+    }
+}
+
+h1 {
+    @extend %tpl-h1;
+}
+
+h2 {
+    @extend %tpl-h2;
+}
+
+.ordering-section {
+    background: $main-grey;
+}
+
+._container {
+    width: 1745px;
+    margin: 0 auto;
+}
+
+.order__wrapper {
+    display: flex;
+    background: $white;
+    border: 1px solid $fourth-grey;
+    border-radius: 6px;
+}
+.order__params {
+    position: relative;
+    width: 1120px;
+    padding: 40px;
+    padding-bottom: 75px;
+    border-right: 1px solid $third-grey;
+}
+
+.params-item {
+    margin-bottom: 30px;
+}
+
+.order__total-info {
+    width: 625px;
+}
+
+.ordering-section__title-wrapper {
+    display: flex;
+    justify-content: space-between;
+    padding-right: 42px;
+    align-items: center;
+}
+
+.back-to-cart-btn {
+    margin-top: 25px;
+}

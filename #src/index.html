@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.min.css">
+    <title>Labirint</title>
+</head>
+<body>
+    <section class="ordering-section">
+        <div class="_container">
+            <div class="ordering-section__title-wrapper">
+                <h1>Оформление заказа</h1>
+                <a href="#" class="back-to-cart-btn _change-btn">↑ Назад к корзине</a>
+            </div>
+            <form>
+                <div class="order__wrapper">
+                    <div class="order__params">
+                        <!--Блок с классом app-item предпологается как независимая от блока order__app сущность, для дальнейшей модульности формы -->
+                        <div class="params-item">
+                            <h2 class="delivery-title">Доставка</h2>
+                            @@include('_delivery-item.html')     
+                        </div>
+                        <div class="params-item recipient-item">
+                            <h2 class="recipient-title">Получатель</h2>
+                            @@include('_recipient-item.html')
+                        </div>
+                        <div class="params-item">
+                            <h2 class="recipient-title">Оплата</h2>
+                            @@include('_payment-item.html')
+                        </div>
+                        @@include('_pagination-item.html')
+                    </div>
+                    @@include('_order-check.html')
+                </div>
+            </form>
+        </div>
+    </section>
+    @@include('_ordering-final.html')
+    <script src="js/script.js"></script>
+</body>
+</html>

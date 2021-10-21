@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.min.css">
+    <title>Labirint</title>
+</head>
+<body>
+    <section class="ordering-section">
+        <div class="_container">
+            <div class="ordering-section__title-wrapper">
+                <h1>Оформление заказа</h1>
+                <a href="#" class="back-to-cart-btn _change-btn">↑ Назад к корзине</a>
+            </div>
+            <form>
+                <div class="order__wrapper">
+                    <div class="order__params">
+                        <!--Блок с классом app-item предпологается как независимая от блока order__app сущность, для дальнейшей модульности формы -->
+                        <div class="params-item">
+                            <h2 class="delivery-title">Доставка</h2>
+                            <div class="delivery">
+                                <div class="delivery__horizontal-scroll">
+                                    <div class="delivery__type">
+                                        <input id="delivery-type-value-1" type="radio" name="delivry-type-radio" checked>
+                                        <label for="delivery-type-value-1">
+                                            <div class="delivery__type-description">
+                                                <span>Почта России, курьер</span>
+                                                <span>&nbsp;—&nbsp;</span>
+                                                <span>24-26 сент.</span>
+                                            </div>
+                                            <div class="delivery__type-description_mobile">
+                                                <span>Почта России, курьер</span>
+                                                <span>&nbsp;—&nbsp;</span>
+                                                <span>24-26 сент.</span>,
+                                                <span>+999 ₽</span>
+                                            </div>
+                                            <div class="delivery__type-content">
+                                                <div class="delivery__type-content-address">ул. Академика Королева, 73/3, Петропавловск- Камчатский, 683000</div>
+                                                <div class="delivery__type-content-price">+999 ₽</div>
+                                            </div>
+                                        </label>
+                                    </div>
+                                    <div class="delivery__type">
+                                        <input id="delivery-type-value-2" type="radio" name="delivry-type-radio">
+                                        <label for="delivery-type-value-2">
+                                            <div class="delivery__type-description">
+                                                <span>Лабиринт, курьер</span>
+                                                <span>&nbsp;—&nbsp;</span>
+                                                <span>24-26 сент.</span>
+                                            </div>
+                                            <div class="delivery__type-description_mobile">
+                                                <span>Лабиринт, курьер</span>
+                                                <span>&nbsp;—&nbsp;</span>
+                                                <span>24-26 сент.</span>,
+                                                <span>+999 ₽</span>
+                                            </div>
+                                            <div class="delivery__type-content">
+                                                <div class="delivery__type-content-address">Можайское шоссе, д. 21, кв. 50, Москва, 121471</div>
+                                                <div class="delivery__type-content-price">+999 ₽</div>
+                                            </div>
+                                        </label>
+                                    </div>
+                                </div>
+                                <a href="#" class="delivery__type-change-btn _change-btn">Выбрать новое место и способ</a>
+                                <div class="delivery__date">
+                                    <input id="delivery-date-value-1" type="radio" name="delivry-date-radio" checked>
+                                    <label for="delivery-date-value-1">
+                                        <div class="delivery__date-description">
+                                            <span>пн, 24 сен — ср, 26 сен</span>
+                                        </div>
+                                        <div class="delivery__date-content">
+                                            <span class="delivery__date-content-time">10:00–19:00</span>
+                                        </div>
+                                    </label>
+                                </div>
+                                <div class="delivery__date">
+                                    <input id="delivery-date-value-2" type="radio" name="delivry-date-radio">
+                                    <label for="delivery-date-value-2">
+                                        <div class="delivery__date-description">
+                                            <span>пн, 24 сен — ср, 26 сен</span>
+                                        </div>
+                                        <div class="delivery__date-content">
+                                            <span class="delivery__date-content-time">10:00–19:00</span>
+                                        </div>
+                                    </label>
+                                </div>
+                                <a href="#" class="delivery__date-change-btn _change-btn">Другие дата и время</a>
+                                <div class="delivery__option">
+                                    <input id="delivery-option-1" type="checkbox" checked>
+                                    <label for="delivery-option-1">Viber/СМС уведомления о статусе заказа</label>
+                                </div>
+                                <div class="delivery__option">
+                                    <input id="delivery-option-2" type="checkbox">
+                                    <label for="delivery-option-2">Оставить у двери (бесконтактная доставка)</label>
+                                </div>
+                            </div>     
+                        </div>
+                        <div class="params-item recipient-item">
+                            <h2 class="recipient-title">Получатель</h2>
+                            <div class="recipient">
+                                <div class="recipient__full-name floating-label">
+                                    <select class="floating-select" onclick="this.setAttribute('value', this.value);" value="">
+                                        <option value=""></option>
+                                        <option value="1">Вольфганг Вениаминович Константинопольский 1</option>
+                                        <option value="2">Вольфганг Вениаминович Константинопольский 2</option>
+                                        <option value="3">Вольфганг Вениаминович Константинопольский 3</option>
+                                        <option value="4">Вольфганг Вениаминович Константинопольский 4</option>
+                                        <option value="5">Вольфганг Вениаминович Константинопольский 5</option>
+                                    </select>
+                                    <label>Имя и фамилия</label>
+                                    <a href="#" class="recipient_full-name-change-btn _change-btn">Новый получатель</a>
+                                </div>
+
+                                <div class="recipient__phone floating-label">
+                                    <select class="floating-select" onclick="this.setAttribute('value', this.value);" value="">
+                                        <option value=""></option>
+                                        <option value="1">+7 910 234-56-78</option>
+                                        <option value="2">+7 910 785-22-51</option>
+                                        <option value="3">+7 893 491-24-16</option>
+                                        <option value="4">+7 511 335-14-97</option>
+                                        <option value="5">+7 481 854-91-32</option>
+                                    </select>
+                                    <label>Контактный телефон</label>
+                                    <a href="#" class="recipient_phone-change-btn _change-btn">Новый телефон</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="params-item">
+                            <h2 class="recipient-title">Оплата</h2>
+                            <div class="payment">
+                                <div class="payment__type">
+                                    <input id="payment-type-value-1" type="radio" name="delivry-type-radio" checked>
+                                    <label for="payment-type-value-1">
+                                        <div class="payment__type-content">
+                                            <div class="payment__type-content-value">Предоплата на сайте</div>
+                                            <div class="payment__type-content-discount">Скидка –3%</div>
+                                        </div>
+                                    </label>
+                                </div>
+                                <div class="payment__type">
+                                    <input id="payment-type-value-2" type="radio" name="delivry-type-radio">
+                                    <label for="payment-type-value-2">
+                                        <div class="payment__type-content">
+                                            <div class="payment__type-content-value">Оплата при получении</div>
+                                        </div>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pagination">
+                            <a class="pagination__item prev disabled"></a>
+                            <a class="pagination__item next"></a>
+                        </div>
+                    </div>
+                    <div class="order__check">
+                        <h2 class="order__check-title">
+                            В заказе
+                            <span>4 товара</span>
+                            <span class="weight">(2 кг)</span>
+                        </h2>
+                        <div class="order__check-item">
+                            <div class="order__check-item-title">Цена товаров</div>
+                            <div class="order__check-item-value">999 999 ₽</div>
+                        </div>
+                        <div class="order__check-item">
+                            <div class="order__check-item-title">Все скидки</div>
+                            <div class="order__check-item-value">–999 999 ₽</div>
+                        </div>
+                        <div class="order__check-item">
+                            <div class="order__check-item-title">Скидка за предоплату</div>
+                            <div class="order__check-item-value">–100%</div>
+                        </div>
+                        <div class="order__check-item">
+                            <div class="order__check-item-title">Почта России, курьер, Академика Королева, 73/3, Петропавловск-Камчатский, 683000 <span class="check-item-date">24 сентября, 10:00–19:00</span></div>
+                            <div class="order__check-item-value">+999 999 ₽</div>
+                        </div>
+                        <div class="order__check-item total">
+                            <div class="order__check-item-title">К оплате:</div>
+                            <div class="order__check-item-value">999 999 ₽</div>
+                        </div>
+                        <div class="order__check-close-btn-wrapper">
+                            <a href="" class="order__check-close-btn">Закрыть подробности</a>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </section>
+    <div class="ordering-final">
+        <div class="_container">
+            <div class="ordering-final__wrapper">
+                <div class="ordering-final__price-title-mobile">
+                    <div>
+                        <span>К оплате:</span>
+                        <span>21 072 ₽</span>
+                    </div>
+                    <a href="#" class="ordering-final__more _change-btn">Подробнее</a>
+                </div>
+                <a class="ordering-final__btn" href="#">Оформить и оплатить</a>
+                <div class="ordering-final__info">
+                    <span class="_bold">Возврат невозможен.</span> С выбранным способом доставки этот заказ можно будет забрать только целиком. Нельзя будет отказаться от части товаров или вернуть весь заказ <a class="_text-link" href="#">Подробнее об этом</a>
+                </div>
+                <div class="ordering-final__price-wrapper">
+                    <div class="ordering-final__price-title">Итого к оплате на сайте:</div>
+                    <div class="ordering-final__price-value">99 999<span>&nbsp₽</span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+</html>

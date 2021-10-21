@@ -1,0 +1,65 @@
+.recipient {
+    display: flex;
+    margin-bottom: 60px;
+}
+
+.recipient-title {
+    margin-bottom: 10px;
+}
+
+.floating-label { 
+    position:relative; 
+    margin-bottom:20px;
+
+    &:after {
+        position: absolute;
+        content: '';
+        width: 14px;
+        height: 15px;
+        right: 19px;
+        top: 50%;
+        margin-top: -7.5px;
+        background: url('../img/arrow-down.svg') no-repeat center;
+    }
+
+    @extend %tpl-custom-select;
+}
+
+.recipient__full-name {
+    width: 572px;
+    height: 74px;
+    margin-right: 14px;
+    margin-bottom: 14px;
+
+    select {
+        height: 100%;
+        font-size: 22px;
+        line-height: 28px;
+        font-family: $default-bold;
+    }
+}
+
+.recipient__phone {
+    width: 287px;
+    height: 74px;
+    margin-bottom: 14px;
+
+    select {
+        height: 100%;
+        font-size: 22px;
+        line-height: 28px;
+        font-family: $default-bold;
+    }
+
+    label {
+        color: $grey-text;
+    }
+}
+
+  
+  
+  
+  
+  
+  
+  
